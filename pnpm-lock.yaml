@@ -6,26 +6,29 @@ settings:
 
 dependencies:
   '@bot-whatsapp/bot':
-    specifier: ^0.1.33
-    version: 0.1.33
+    specifier: ^0.1.35
+    version: 0.1.35
   '@bot-whatsapp/cli':
-    specifier: ^0.1.33
-    version: 0.1.33
+    specifier: ^0.1.35
+    version: 0.1.35
   '@bot-whatsapp/database':
-    specifier: ^0.1.33
-    version: 0.1.33
+    specifier: ^0.1.35
+    version: 0.1.35
   '@bot-whatsapp/portal':
     specifier: file:packages/portalQR
     version: file:packages/portalQR
   '@bot-whatsapp/provider':
-    specifier: ^0.1.33
-    version: 0.1.33
+    specifier: ^0.1.35
+    version: 0.1.35
   '@whiskeysockets/baileys':
     specifier: ^6.4.0
     version: 6.5.0(link-preview-js@3.0.5)
   dotenv:
     specifier: ^16.3.1
     version: 16.3.1
+  eslint-plugin-bot-whatsapp:
+    specifier: ^0.1.35
+    version: 0.1.35
   google-auth-library:
     specifier: ^8.8.0
     version: 8.9.0
@@ -608,21 +611,21 @@ packages:
     dev: false
     optional: true
 
-  /@bot-whatsapp/bot@0.1.33:
-    resolution: {integrity: sha512-PHM4pe0wx8IUipL37O+rcx2a36HMBzgPQt7Sto3EH7Fndqj7bwsmmhKTzAtGDsja4NOlecjz2bh8fjC1aI9Faw==}
+  /@bot-whatsapp/bot@0.1.35:
+    resolution: {integrity: sha512-UIJk/PqKVrftQQG8eaTovLLVp3Kn613wQ1YI6k3m0xNNjbl6uXSy07FbTtyx/BzOIPEBrnVxuPzfXQ/oGwCkQQ==}
     dependencies:
       dotenv: 16.3.1
     dev: false
 
-  /@bot-whatsapp/cli@0.1.33:
-    resolution: {integrity: sha512-DkHZVlowAZAqXestrMcplCJzRYiHFu54TpCvR/nXlOzz/g4UfqT3lcZGb6mm28Jc8HxTTAVnwCnjKnNZSaht/Q==}
+  /@bot-whatsapp/cli@0.1.35:
+    resolution: {integrity: sha512-oKyYDO5YPslVwlFQasgA/SY1nyWjscY+fnd6J7MhKRVZuqAeweViKRaeifLQJWUy6ILjkln2DVAYjWydhxc63Q==}
     hasBin: true
     dependencies:
       picocolors: 1.0.0
     dev: false
 
-  /@bot-whatsapp/database@0.1.33:
-    resolution: {integrity: sha512-rw5XdHumhh14UJlWh3PzTLgVyTFwZigl5etwpNXI3u7n8zyorHSg8NCJou3sOlTTJld4f+85OpfiZrOeiBMaYQ==}
+  /@bot-whatsapp/database@0.1.35:
+    resolution: {integrity: sha512-wxfO5wx9wqUmueUIT1+0AKyF09YbHBdt6lvNIeSZ/dRfnIya1+5n/Upwh5rkJPfTxdsqdUI9Ipmy5/lAnqEREQ==}
     dependencies:
       dotenv: 16.3.1
       mongodb: 4.17.1
@@ -633,16 +636,17 @@ packages:
       - pg-native
     dev: false
 
-  /@bot-whatsapp/provider@0.1.33:
-    resolution: {integrity: sha512-GHLNd9UWdipB6QeB2+hGP5wOzyI0NwPvzXi/gex7kkaHjARxGWYorAxit4Mj6dh12gvY9zTDIh91JWNgj6ABog==}
+  /@bot-whatsapp/provider@0.1.35:
+    resolution: {integrity: sha512-IrRKcx0NeYLtqm+mDlhJw+wBy4ziYMmgPACHXEwqFXVegcm0n74Y32Baet3lvTCwytuMigyENK3etlaz1+kiOA==}
     dependencies:
-      '@bot-whatsapp/bot': 0.1.33
+      '@bot-whatsapp/bot': 0.1.35
       '@ffmpeg-installer/ffmpeg': 1.1.0
       axios: 1.5.1
       combine-image: 1.0.3
       fluent-ffmpeg: 2.1.2
       follow-redirects: 1.15.3
       qr-image: 3.2.0
+      queue-promise: 2.2.1
       rimraf: 3.0.2
       sharp: 0.30.7
     transitivePeerDependencies:
@@ -1779,6 +1783,10 @@ packages:
 
   /escape-html@1.0.3:
     resolution: {integrity: sha512-NiSupZ4OeuGwr68lGIeym/ksIZMJodUGOSCZ/FSnTxcrekbvqrgdUxlJOMpijaKZVjAJrWrGs/6Jy8OMuyj9ow==}
+    dev: false
+
+  /eslint-plugin-bot-whatsapp@0.1.35:
+    resolution: {integrity: sha512-DbUl7srgawObiKlURmv6UKnT8b8YYSfpzkwiaGnCQEzft6W1U66d7xFY8VxLStb3+jMAOJ66LRY0OCbNavInug==}
     dev: false
 
   /etag@1.8.1:
@@ -2935,6 +2943,11 @@ packages:
     resolution: {integrity: sha512-X/xY82scca2tau62i9mDyU9K+I+djTMUsvwf7xnUX5GLvVzgJybOJf4Y6o9Zx3oJK/LSXg5tTZBjwzqVPaPO2g==}
     engines: {node: '>=0.4.x'}
     deprecated: The querystring API is considered Legacy. new code should use the URLSearchParams API instead.
+    dev: false
+
+  /queue-promise@2.2.1:
+    resolution: {integrity: sha512-C3eyRwLF9m6dPV4MtqMVFX+Xmc7keZ9Ievm3jJ/wWM5t3uVbFnGsJXwpYzZ4LaIEcX9bss/mdaKzyrO6xheRuA==}
+    engines: {node: '>=8.12.0'}
     dev: false
 
   /queue@6.0.2:
