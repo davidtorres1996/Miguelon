@@ -6,17 +6,14 @@ import MockAdapter from "@bot-whatsapp/database/json";
 import linkPreview from 'link-preview-js';
 
 
-import { FlowFile }  from "./flows/FlowFile.js";
-import { LinkPreviewFlow }  from "./flows/LinkPreviewFlow.js";
-import { StickerFlow }  from "./flows/StickerFlow.js";
+import { FlowParticipar }  from "./flows/FlowFile.js";
+
 
 
 const main = async () => {
   const adapterDB = new MockAdapter();
   const adapterFlow = bot.createFlow([
-    FlowFile,
-    LinkPreviewFlow,
-    StickerFlow
+    FlowParticipar
   ]);
   const adapterProvider = bot.createProvider(BaileysProvider);
 

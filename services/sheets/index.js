@@ -28,36 +28,25 @@ class GoogleSheetService {
    * @param {*} dayNumber
    * @returns
    */
-  searchAndReturnRowByPhoneNumber = async (phoneNumber) => {
+  searchAndReturnFirstRow = async () => {
     try {
       await this.doc.loadInfo();
       const sheet = this.doc.sheetsByIndex[0]; // La primera hoja
   
-      const rows = await sheet.getRows(); // Obtener todas las filas
+      const rows = await sheet.getRows({ limit: 1 }); // Obtener la primera fila
   
-      for (const row of rows) {
-        let foundPhoneNumber = false;
-        const rowData = {};
-  
-        for (const [index, value] of row._rawData.entries()) {
-          const columnName = sheet.headerValues[index];
-          rowData[columnName] = value;
-  
-          if (value === phoneNumber) {
-            foundPhoneNumber = true;
-          }
-        }
-  
-        if (foundPhoneNumber) {
-          return rowData;
-        }
+      if (rows.length >= 1) { // Verificar si hay al menos una fila en la hoja
+        const firstRow = rows[0];
+        return firstRow._rawData; // Devolver los datos de la primera fila
+      } else {
+        return null; // Retorna null si no hay filas en la hoja
       }
-      return null; // Retorna null si no se encuentra el número de teléfono
     } catch (err) {
       console.log("Error:", err);
       return null;
     }
   };
+  
   
   
   /**
