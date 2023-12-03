@@ -14,7 +14,7 @@ export const FlowParticipar = bot .addKeyword("Hola, quiero participar en el Tor
     const Data = await googleSheet.searchAndReturnFirstRow();
 
     if (Data !== null) {
-
+            await delay(15000)
             await flowDynamic([{
                 body: `${Data[0]}`,
                 media: 'https://atubot.net.pe/wp-content/uploads/2023/11/miguelon.jpeg'
